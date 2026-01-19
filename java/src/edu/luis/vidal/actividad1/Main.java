@@ -1,8 +1,10 @@
 package edu.luis.vidal.actividad1;
 
-import edu.luis.vidal.actividad1.ui.CLI;
+import edu.luis.vidal.actividad1.ui.Menu;
+
 public class Main {
     public static void main(String[] args) {
-        CLI.start();
+        Menu menu = new Menu();
+        menu.iniciar();
     }
 }

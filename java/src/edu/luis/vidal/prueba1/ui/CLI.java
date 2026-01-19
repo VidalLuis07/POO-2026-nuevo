@@ -1,6 +1,6 @@
-package edu.luis.vidal.actividad1.ui;
+package edu.luis.vidal.prueba1.ui;
 
-import edu.luis.vidal.actividad1.process.Switch;
+import edu.luis.vidal.prueba1.process.Switch;
 
 public class CLI {
     public static void start(){
