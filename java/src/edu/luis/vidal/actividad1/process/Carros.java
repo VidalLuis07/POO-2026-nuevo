@@ -1,5 +1,9 @@
 package edu.luis.vidal.actividad1.process;
 
+/**
+ * esta clase guarda la informacion de los carros
+ */
+
 public class Carros {
     private String modelo;
     private int anio;
@@ -37,3 +41,5 @@ public class Carros {
                """.formatted(modelo, anio, color, transmision, asientos, precio);
     }
 }
+
+

@@ -3,10 +3,14 @@ import edu.luis.vidal.actividad1.process.Carros;
 import edu.luis.vidal.actividad1.data.Ticket;
 import java.util.Scanner;
 public class Menu {
-
     private Scanner scanner = new Scanner(System.in);
     private Carros[] carros;
     private String nombreCliente;
+
+    /**
+     * La clase Menu maneja la interaccion ente el usuario y la terminal
+     * Muestra el catálogo de vehículos y las opciones para comprar y ver informacion
+     */
 
     public Menu() {
         carros = new Carros[]{
