@@ -1,39 +1,25 @@
 package edu.luis.vidal.actividad2.calculadora.process;
 
-import edu.luis.vidal.actividad2.calculadora.process.Multiplicacion;
+import edu.luis.vidal.actividad2.calculadora.process.Division;
 
 public class Logaritmo {
     /**
+     * Calcula el logaritmo entero mediante divisiones sucesivas.
      * @param op1 es la base del logaritmo
      * @param op2 es el argumento del logaritmo
-     * @return contador es la cantidad
+     * @return devuelve el logaritmo entero
      */
     public static int realizarOperacion(int op1, int op2) {
-        if (op1 <= 1) {
-            System.out.println("Error: La base debe ser mayor a 1");
-            return 0;
-        }
-        if (op2 <= 0) {
-            System.out.println("Error: El argumento debe ser mayor a 0");
-            return 0;
-        }
-
+        if (op1 <= 1 || op2 <= 0) return 0;
         int contador = 0;
-        int acumulado = 1;
+        int valorActual = op2;
 
+        while (valorActual >= op1) {
 
-        while (true) {
-
-            int siguiente = Multiplicacion.realizarOperacion(acumulado, op1);
-
-            if (siguiente <= op2) {
-                acumulado = siguiente;
-                contador++;
-            } else {
-                break;
-            }
+            valorActual = Division.realizarOperacion(valorActual, op1);
+            contador++;
         }
+
         return contador;
     }
 }
-

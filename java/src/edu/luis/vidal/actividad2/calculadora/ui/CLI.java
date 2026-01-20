@@ -69,7 +69,11 @@ public class CLI {
                 op1 = scanner.nextInt();
                 System.out.println("Introduce el argumento");
                 op2 = scanner.nextInt();
-                System.out.printf("El resultado de la operacion %d %s %d es: %d", op1, "log", op2, Logaritmo.realizarOperacion(op1, op2));
+                if (op1 <= 1 || op2 <= 0) {
+                    System.out.println("Error: Base debe ser > 1 y argumento > 0.");
+                } else {
+                    System.out.printf("El resultado del logaritmo base %d de %d es: %d", op1, op2, Logaritmo.realizarOperacion(op1, op2));
+                }
                 break;
             case 8:
                 System.out.println("Introduce el radical");
