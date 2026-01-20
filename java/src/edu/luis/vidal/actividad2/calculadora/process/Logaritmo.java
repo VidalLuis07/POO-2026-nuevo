@@ -9,7 +9,6 @@ public class Logaritmo {
      * @return contador es la cantidad
      */
     public static int realizarOperacion(int op1, int op2) {
-        // 1. Validaciones matemáticas
         if (op1 <= 1) {
             System.out.println("Error: La base debe ser mayor a 1");
             return 0;
@@ -22,17 +21,15 @@ public class Logaritmo {
         int contador = 0;
         int acumulado = 1;
 
-        // 2. El ciclo de búsqueda
-        // Mientras el acumulado multiplicado por la base no pase al argumento
+
         while (true) {
-            // Intentamos multiplicar una vez más
+
             int siguiente = Multiplicacion.realizarOperacion(acumulado, op1);
 
             if (siguiente <= op2) {
                 acumulado = siguiente;
-                contador++; // Llevamos la cuenta de cuántas veces multiplicamos
+                contador++;
             } else {
-                // Si la siguiente multiplicación se pasa, nos salimos
                 break;
             }
         }
